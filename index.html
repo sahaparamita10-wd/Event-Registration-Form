@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.jfif">
+    <title>Event Registration Form</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        form{
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Registration Form</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full-Name:    </label>
+            <input type="text" id="name" name="fullname" placeholder="ex: Rohan Das" required>
+            <br>
+            <label for="email">Email:   </label>
+            <input type="email" id="email" name="email" pattern=".+@gmail\.com" placeholder="ex: example@gmail.com" required>
+            <br>
+            <label for="tel">Contact No:    </label>
+            <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" placeholder="ex: 1234567890" required>
+            <br>
+            <label for="date">Date of Birth:    </label>
+            <input type="date" id="date" name="date">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Event Details</legend>
+            <label for="event_type">Event Type:</label>
+                <select name="event_type" id="event_type" required>
+                    <option value="select" disabled selected>-- Select --</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="conference">Conference</option>
+                    <option value="seminar">Seminar</option>
+                </select>
+            <br>
+            <small>Attendance Mode: </small>
+            <br>
+            <label for="online">
+            <input type="radio" id="online" name="mode" value="online"> Online
+            </label>
+            <br>
+            <label for="offline">
+            <input type="radio" id="offline" name="mode" value="offline"> Offline
+            </label>
+            <br>
+            <small>Sessions Interested In:</small>
+            <br>
+            <input type="checkbox" id="morning" value="morning" name="session1"> 
+            <label for="morning">Morning Session</label>
+            <br>
+            <input type="checkbox" id="afternoon" value="afternoon" name="session2"> 
+            <label for="afternoon">Afternoon Session</label>
+            <br>
+            <input type="checkbox" id="evening" value="evening" name="session3"> 
+            <label for="evening">Evening Session</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="comments">Comments or Query:</label>
+            <br>
+            <textarea name="comments" id="comments" rows="4" cols="40" placeholder="write your comments or query!"></textarea>
+        </fieldset>
+        <br>
+        <input type="reset" name="reset" id="reset" value="Reset">
+        <br>
+        <input type="submit" name="submit" id="submit" value="Register">
+    </form>
+</body>
+</html>
